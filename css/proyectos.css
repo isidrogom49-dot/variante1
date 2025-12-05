@@ -10,7 +10,7 @@
   --gris:#1f2937;
   --gris-claro:#f1f5f9;
   --whatsapp:#25D366;
-  --instagram-gradient:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  --instagram-gradient:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
 }
 
 /* RESET */
@@ -64,17 +64,10 @@ body{background:var(--negro);color:var(--blanco);overflow-x:hidden;scroll-behavi
 .cta .btn-hero-pro-3{background:var(--verde-suave); margin-top:0;}
 
 /* WHATSAPP E INSTAGRAM FLOTANTES */
-.social-float{
+.whatsapp-float, .instagram-float{
   position:fixed;
-  bottom:25px;
   right:25px;
-  display:flex;
-  flex-direction:column;
-  gap:15px;
   z-index:9999;
-}
-
-.social-float a{
   width:60px;
   height:60px;
   border-radius:50%;
@@ -82,26 +75,26 @@ body{background:var(--negro);color:var(--blanco);overflow-x:hidden;scroll-behavi
   align-items:center;
   justify-content:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  color:white;
-  font-size:28px;
+  transition:.3s;
 }
 
-/* WhatsApp */
-.social-float a.whatsapp{background:var(--whatsapp);}
-.social-float a.whatsapp:hover{transform:scale(1.15);box-shadow:0 12px 25px rgba(0,0,0,0.3);}
+.whatsapp-float{
+  bottom:25px;
+  background:var(--whatsapp);
+}
 
-/* Instagram */
-.social-float a.instagram{
+.whatsapp-float i{font-size:28px;color:white;}
+.whatsapp-float:hover{transform:scale(1.15);box-shadow:0 12px 25px rgba(0,0,0,0.3);}
+
+.instagram-float{
+  bottom:95px;
   background:var(--instagram-gradient);
-  background: -webkit-linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: white;
 }
-.social-float a.instagram:hover{transform:scale(1.15);box-shadow:0 12px 25px rgba(0,0,0,0.3);}
 
-/* FOOTER MEJORADO (SIN TOCAR) */
+.instagram-float i{font-size:28px;color:white;}
+.instagram-float:hover{transform:scale(1.15);box-shadow:0 12px 25px rgba(0,0,0,0.3);}
+
+/* FOOTER MEJORADO */
 .footer {
   padding: 50px 20px;
   background: #0f172a;
@@ -199,6 +192,10 @@ body{background:var(--negro);color:var(--blanco);overflow-x:hidden;scroll-behavi
   .footer-grid{text-align:center;justify-items:center;}
   .footer-icons a,
   .footer-icons p{justify-content:center;}
+
+  /* Ajuste iconos flotantes móviles */
+  .whatsapp-float{bottom:25px;right:20px;}
+  .instagram-float{bottom:85px;right:20px;}
 }
 
 @media(max-width:480px){
