@@ -1,0 +1,89 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* VARIABLES DE COLOR */
+:root{
+  --azul:#2563eb;
+  --verde-suave:#34d399;
+  --blanco:#ffffff;
+  --negro:#0f172a;
+  --gris:#1f2937;
+  --gris-claro:#f1f5f9;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:var(--negro);color:var(--blanco);overflow-x:hidden;scroll-behavior:smooth}
+
+/* HEADER */
+.header{position:fixed;top:0;width:100%;background:#0f172a;backdrop-filter:blur(5px);box-shadow:0 3px 12px rgba(0,0,0,0.3);z-index:999}
+.header-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;}
+.logo{width:48px;border-radius:50%;}
+.brand{display:flex;align-items:center;gap:12px;font-size:1.3rem;font-weight:700;color:var(--blanco);text-decoration:none;}
+.nav{display:flex;gap:30px}
+.nav a{text-decoration:none;color:var(--blanco);font-weight:600;position:relative}
+.nav a::after{content:"";position:absolute;height:3px;width:0%;bottom:-5px;left:0;background:var(--verde-suave);transition:.3s;}
+.nav a:hover::after,.nav a.active::after{width:100%;}
+.menu-toggle{font-size:28px;cursor:pointer;display:none;}
+
+/* HERO ANIMADO */
+.hero-pro-3{position:relative;height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:linear-gradient(135deg,#0f172a,#1f2937)}
+.hero-pro-3 canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1}
+.hero-pro-content-3{position:relative;z-index:2;max-width:800px;padding:20px}
+.hero-title-3{font-size:3rem;font-weight:800;margin-bottom:20px;color:var(--verde-suave)}
+.hero-subtitle-3{font-size:1.3rem;margin-bottom:30px;color:var(--blanco)}
+.typing-text-3{color:var(--blanco)}
+.btn-hero-pro-3{padding:14px 38px;background:var(--verde-suave);color:white;font-weight:700;border-radius:40px;text-decoration:none;transition:.3s}
+.btn-hero-pro-3:hover{transform:scale(1.08);background:var(--azul);color:white}
+
+/* TARJETAS EQUIPO (igual a proyectos) */
+.projects{padding:80px 20px;background:var(--gris)}
+.section-title{text-align:center;font-size:2.3rem;margin-bottom:40px;font-weight:700;color:var(--verde-suave)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px}
+.project-card{background:#111827;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.5);transition:all 0.4s;text-align:center;display:flex;flex-direction:column;align-items:center;padding:20px;cursor:pointer}
+.project-card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 15px 40px rgba(0,0,0,0.7)}
+.project-card img.project-icon{width:100px;height:100px;border-radius:50%;margin-bottom:15px}
+.project-card h3{font-size:1.5rem;font-weight:700;margin-bottom:10px;color:var(--blanco)}
+.project-card p{font-size:1rem;padding:0 10px 15px;color:#cbd5e1}
+
+/* VALUES */
+.values{padding:80px 20px}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.value-card{background:#111827;padding:35px;border-radius:18px;text-align:center;box-shadow:0 6px 25px rgba(0,0,0,0.5);transition:.3s;cursor:pointer}
+.value-card:hover{transform:translateY(-10px) scale(1.02)}
+.value-card i{font-size:50px;color:var(--verde-suave);margin-bottom:15px}
+.value-card h3{font-size:1.3rem;font-weight:700;margin-bottom:10px}
+.value-card p{color:#cbd5e1}
+
+/* FOOTER */
+.footer{padding:40px 20px;background:#0f172a;color:white;font-weight:600;margin-top:50px;text-align:center}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:20px;text-align:left}
+.footer-grid h4{margin-bottom:12px;color:var(--verde-suave)}
+.footer-grid a{display:block;color:white;text-decoration:none;margin-bottom:5px;transition:.3s}
+.footer-grid a:hover{color:var(--verde-suave)}
+.footer p{margin-top:20px;font-weight:500;text-align:center;color:#cbd5e1}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  .nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    right:20px;
+    top:65px;
+    background:#111827;
+    padding:15px 20px;
+    border-radius:8px;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(0,0,0,0.5);
+  }
+  .nav a{margin:10px 0}
+  .nav.show{display:flex}
+  .footer-grid{text-align:center;justify-items:center}
+}
+
+@media(max-width:480px){
+  .hero-title-3{font-size:2.2rem}
+  .hero-subtitle-3{font-size:1.1rem}
+}
