@@ -50,6 +50,7 @@ h1,h2,h3 { font-family:'Montserrat',sans-serif; }
 .tech-card { background:linear-gradient(135deg,#00bfa6,#00ffd6); color:#fff; padding:25px; border-radius:20px; text-align:center; box-shadow:0 15px 40px rgba(0,0,0,0.15); transition:0.5s; cursor:pointer; }
 .tech-card:hover { transform:translateY(-15px) rotateX(5deg); box-shadow:0 25px 60px rgba(0,0,0,0.25);}
 .tech-card i { font-size:2.5rem; margin-bottom:15px; }
+.tech-card p { font-size:0.9rem; margin-top:10px; line-height:1.4; }
 
 /* BANER VISUALIZAR DOCUMENTO */
 .document-banner { text-align:center; margin:60px 0; }

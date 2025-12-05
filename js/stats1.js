@@ -1,5 +1,5 @@
 /* ========================================
-   STATS.JS MEJORADO
+   STATS.JS PROYECTO 3
    Animación de conteo + scroll + hover
 ========================================= */
 
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const duration = 2000; // duración en ms
         const easedProgress = easeOutQuad(Math.min(progress / duration, 1));
 
-        // Manejar decimales
         if (target % 1 !== 0) {
           stat.textContent = (target * easedProgress).toFixed(1);
         } else {
@@ -59,8 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
     observerStats.observe(statsSection);
   }
 
-  // Hover en iconos (solo agregar clase CSS, no JS)
-  // Movemos la transición a CSS:
-  // .stat-item i { transition: transform 0.4s ease, color 0.4s ease; }
-
+  // Hover en iconos (solo clase CSS)
 });

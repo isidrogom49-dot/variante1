@@ -1,66 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================
-       MENÚ HAMBURGUESA
-  ========================= */
-  const hamburger = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("navMenu");
+  /* ============================
+     MENU HAMBURGUESA
+  ============================ */
+  const hamburger = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav");
 
   hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("show");
+    hamburger.classList.toggle("active");
   });
 
   document.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
       navMenu.classList.remove("show");
+      hamburger.classList.remove("active");
     }
   });
 
-  /* =========================
-       AOS
-  ========================= */
-  if (AOS) {
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  }
+  /* ============================
+     INICIALIZAR AOS
+  ============================ */
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
 
-  /* =========================
-       ESTADÍSTICAS ANIMADAS
-  ========================= */
-  const stats = document.querySelectorAll(".stat-number");
-  let statsActivated = false;
+  /* ============================
+     FORMULARIO DE OPINIÓN
+  ============================ */
+  const feedbackFormPro = document.getElementById("feedbackFormPro");
+  const formMessagePro = document.querySelector(".form-message-pro");
 
-  function animateStats() {
-    if (statsActivated) return;
-    statsActivated = true;
+  feedbackFormPro.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    stats.forEach((stat) => {
-      const target = parseFloat(stat.getAttribute("data-target"));
-      let start = 0;
-      const duration = 2000;
-      const increment = target / (duration / 16);
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-      const updateCounter = () => {
-        start += increment;
-        stat.textContent = start.toFixed(target % 1 !== 0 ? 1 : 0);
+    if (!name || !email || !message) {
+      formMessagePro.style.color = "#ff4c4c";
+      formMessagePro.textContent = "Por favor completa todos los campos.";
+      formMessagePro.style.display = "block";
+      return;
+    }
 
-        if (start < target) {
-          requestAnimationFrame(updateCounter);
-        } else {
-          stat.textContent = target;
-        }
-      };
-      updateCounter();
-    });
-  }
-
-  const statsSection = document.querySelector(".stats-pro");
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) animateStats();
-  }, { threshold: 0.4 });
-
-  observer.observe(statsSection);
+    formMessagePro.style.color = "#fff";
+    formMessagePro.textContent = "¡Gracias por tu opinión! La hemos recibido con éxito.";
+    formMessagePro.style.display = "block";
+    feedbackFormPro.reset();
+  });
 
 });

@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".nav");
 
   hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show"); // Mostrar/Ocultar menú
-    hamburger.classList.toggle("active"); // Animación hamburguesa
+    navMenu.classList.toggle("show");
+    hamburger.classList.toggle("active");
   });
 
-  // Cerrar menú al hacer clic fuera
   document.addEventListener("click", (e) => {
     if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
       navMenu.classList.remove("show");

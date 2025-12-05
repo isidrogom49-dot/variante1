@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Traductor Morse - System Innovation</title>
+  <title>Código Morse - System Innovation</title>
   <link rel="stylesheet" href="css/proyecto2.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,10 +13,10 @@
 
   <!-- HEADER -->
   <header class="header">
-    <div class="header-container">
+    <div class="container header-container">
       <a href="index.html" class="brand">
         <img src="img/L.E.jpg" alt="Logo" class="logo">
-        SYSTEM INNOVATION
+        <span>SYSTEM INNOVATION</span>
       </a>
       <nav class="nav" id="navMenu">
         <a href="index.html">Inicio</a>
@@ -31,40 +31,48 @@
   <!-- HERO -->
   <section class="project-hero">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 data-aos="fade-down" data-aos-delay="200">Traductor Morse</h1>
-      <p data-aos="fade-up" data-aos-delay="400">Decodificación y transmisión de mensajes en código Morse mediante Arduino y Python.</p>
+    <div class="container hero-content">
+      <h1 data-aos="fade-down" data-aos-delay="200">Código Morse</h1>
+      <p data-aos="fade-up" data-aos-delay="400">Aprende y practica el código Morse con tecnología interactiva.</p>
       <a href="proyectos.html" class="btn-back" data-aos="fade-up" data-aos-delay="600">← Volver a Proyectos</a>
       <div class="hero-icons" data-aos="fade-up" data-aos-delay="800">
-        <i class="fas fa-microchip"></i>
         <i class="fab fa-python"></i>
-        <i class="fas fa-robot"></i>
+        <i class="fas fa-microchip"></i>
+        <i class="fas fa-lightbulb"></i>
       </div>
     </div>
   </section>
 
-  <!-- IMÁGENES DESTACADAS -->
+  <!-- SECCIÓN DE IMÁGENES DESTACADAS -->
   <section class="featured-images container" data-aos="fade-up">
     <h2>Imágenes del Proyecto</h2>
     <div class="images-grid">
-      <div class="image-card"><img src="img/1.jpg" alt="Imagen 1"></div>
-      <div class="image-card"><img src="img/4.jpg" alt="Imagen 2"></div>
-      <div class="image-card"><img src="img/3.jpg" alt="Imagen 3"></div>
-      <div class="image-card"><img src="img/2.jpg" alt="Imagen 4"></div>
+      <div class="image-card">
+        <img src="img/morse1.jpg" alt="Imagen 1">
+      </div>
+      <div class="image-card">
+        <img src="img/morse2.jpg" alt="Imagen 2">
+      </div>
+      <div class="image-card">
+        <img src="img/morse3.jpg" alt="Imagen 3">
+      </div>
+      <div class="image-card">
+        <img src="img/morse4.jpg" alt="Imagen 4">
+      </div>
     </div>
   </section>
 
-  <!-- DETALLES -->
+  <!-- DETALLES DEL PROYECTO -->
   <section class="project-details container">
     <div class="detail-card" data-aos="fade-right">
       <i class="fas fa-cogs"></i>
       <h2>Sobre el Proyecto</h2>
-      <p>Traductor Morse combina Arduino, Python y electrónica básica para transmitir y decodificar mensajes en tiempo real mediante LEDs y sonidos.</p>
+      <p>Este proyecto utiliza Python y hardware interactivo para codificar y decodificar mensajes en código Morse, combinando señales visuales y sonoras para aprendizaje práctico.</p>
     </div>
     <div class="detail-card" data-aos="fade-left">
       <i class="fas fa-lightbulb"></i>
       <h2>Objetivo</h2>
-      <p>Demostrar cómo la tecnología puede ser utilizada para comunicación básica, educación y automatización mediante un prototipo funcional y replicable.</p>
+      <p>Demostrar cómo la tecnología y la programación pueden facilitar el aprendizaje de sistemas de comunicación clásicos, como el código Morse.</p>
     </div>
   </section>
 
@@ -72,28 +80,61 @@
   <section class="project-tech container">
     <h2 data-aos="fade-up">Tecnologías Aplicadas</h2>
     <div class="tech-cards">
-      <div class="tech-card" data-aos="flip-left" data-aos-delay="100"><i class="fas fa-microchip"></i><h3>Arduino</h3></div>
-      <div class="tech-card" data-aos="flip-left" data-aos-delay="200"><i class="fab fa-python"></i><h3>Python</h3></div>
-      <div class="tech-card" data-aos="flip-left" data-aos-delay="300"><i class="fas fa-project-diagram"></i><h3>Electrónica</h3></div>
-      <div class="tech-card" data-aos="flip-left" data-aos-delay="400"><i class="fas fa-robot"></i><h3>Automatización</h3></div>
+      <div class="tech-card" data-aos="flip-left" data-aos-delay="100">
+        <i class="fab fa-python"></i>
+        <h3>Python</h3>
+        <p>Lenguaje de programación para procesar y codificar los mensajes Morse.</p>
+      </div>
+      <div class="tech-card" data-aos="flip-left" data-aos-delay="200">
+        <i class="fas fa-microchip"></i>
+        <h3>Raspberry Pi</h3>
+        <p>Microcomputadora que controla los LEDs y buzzer para señales Morse.</p>
+      </div>
+      <div class="tech-card" data-aos="flip-left" data-aos-delay="300">
+        <i class="fas fa-lightbulb"></i>
+        <h3>LED</h3>
+        <p>Señales visuales para representar los puntos y rayas del código Morse.</p>
+      </div>
+      <div class="tech-card" data-aos="flip-left" data-aos-delay="400">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Buzzer</h3>
+        <p>Señales sonoras para reproducir el código Morse audible.</p>
+      </div>
     </div>
   </section>
 
-  <!-- DOCUMENTO -->
+  <!-- BANER VISUALIZAR DOCUMENTO -->
   <section class="document-banner container" data-aos="fade-up">
-    <a href="F_PDF/traductor.pdf" target="_blank" class="btn-document">
-      <i class="fas fa-file-pdf"></i> Visualizar Documento
+    <a href="F_PDF/MORSE.pdf" target="_blank" class="btn-document">
+      <i class="fas fa-file-pdf"></i>
+      Visualizar Documento
     </a>
   </section>
 
-  <!-- ESTADÍSTICAS -->
+  <!-- ESTADÍSTICAS ANIMADAS -->
   <section class="stats-pro container" data-aos="fade-up">
     <h2 class="section-title">Resultados del Proyecto</h2>
     <div class="stats-grid">
-      <div class="stat-item"><i class="fas fa-bolt"></i><h3 class="stat-number" data-target="95">0%</h3><p>Eficiencia de Decodificación</p></div>
-      <div class="stat-item"><i class="fas fa-user-shield"></i><h3 class="stat-number" data-target="98">0%</h3><p>Seguridad de Señales</p></div>
-      <div class="stat-item"><i class="fas fa-envelope-open-text"></i><h3 class="stat-number" data-target="500">0</h3><p>Mensajes Transmitidos</p></div>
-      <div class="stat-item"><i class="fas fa-thumbs-up"></i><h3 class="stat-number" data-target="4.8">0</h3><p>Calificación de Usuarios</p></div>
+      <div class="stat-item">
+        <i class="fas fa-bolt"></i>
+        <h3 class="stat-number" data-target="95">0%</h3>
+        <p>Eficiencia de Transmisión</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-user-shield"></i>
+        <h3 class="stat-number" data-target="98">0%</h3>
+        <p>Aprendizaje Mejorado</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-code"></i>
+        <h3 class="stat-number" data-target="200">0</h3>
+        <p>Líneas de Código</p>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-thumbs-up"></i>
+        <h3 class="stat-number" data-target="4.8">0</h3>
+        <p>Calificación de Usuarios</p>
+      </div>
     </div>
   </section>
 
@@ -102,23 +143,48 @@
     <h2 class="section-title">Etapas del Proyecto</h2>
     <div class="roadmap-line"></div>
     <div class="roadmap-grid">
-      <div class="roadmap-step" data-aos="fade-right"><i class="fas fa-pencil-ruler"></i><h3>Diseño</h3><p>Planificación de flujo de datos y circuitos electrónicos.</p></div>
-      <div class="roadmap-step" data-aos="fade-left"><i class="fas fa-microchip"></i><h3>Integración</h3><p>Conexión de Arduino con LEDs y sensores.</p></div>
-      <div class="roadmap-step" data-aos="fade-right"><i class="fas fa-code"></i><h3>Programación</h3><p>Desarrollo en Python y Arduino IDE para transmisión y decodificación Morse.</p></div>
-      <div class="roadmap-step" data-aos="fade-left"><i class="fas fa-check-circle"></i><h3>Pruebas</h3><p>Validación de comunicación y ajustes de velocidad y precisión.</p></div>
+      <div class="roadmap-step" data-aos="fade-right">
+        <i class="fas fa-pencil-ruler"></i>
+        <h3>Diseño</h3>
+        <p>Planificación del sistema de codificación y selección de hardware.</p>
+      </div>
+      <div class="roadmap-step" data-aos="fade-left">
+        <i class="fas fa-microchip"></i>
+        <h3>Integración</h3>
+        <p>Conexión de LEDs, buzzer y Raspberry Pi para el proyecto.</p>
+      </div>
+      <div class="roadmap-step" data-aos="fade-right">
+        <i class="fas fa-code"></i>
+        <h3>Programación</h3>
+        <p>Codificación en Python para traducir mensajes y controlar señales.</p>
+      </div>
+      <div class="roadmap-step" data-aos="fade-left">
+        <i class="fas fa-check-circle"></i>
+        <h3>Pruebas</h3>
+        <p>Validación del código Morse y ajustes finales del sistema.</p>
+      </div>
     </div>
   </section>
 
-  <!-- OPINIÓN -->
+  <!-- OPINIÓN PREMIUM -->
   <section class="project-feedback-pro container" data-aos="fade-up">
     <div class="feedback-header">
       <h2>Déjanos tu Opinión</h2>
       <p>Tu retroalimentación nos ayuda a mejorar y crear proyectos más innovadores.</p>
     </div>
     <form id="feedbackFormPro" class="feedback-form">
-      <div class="form-group"><i class="fas fa-user"></i><input type="text" id="name" placeholder="Nombre Completo" required></div>
-      <div class="form-group"><i class="fas fa-envelope"></i><input type="email" id="email" placeholder="Correo Electrónico" required></div>
-      <div class="form-group"><i class="fas fa-comment-dots"></i><textarea id="message" placeholder="Escribe tu opinión..." rows="5" required></textarea></div>
+      <div class="form-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" placeholder="Nombre Completo" required>
+      </div>
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="Correo Electrónico" required>
+      </div>
+      <div class="form-group">
+        <i class="fas fa-comment-dots"></i>
+        <textarea id="message" placeholder="Escribe tu opinión..." rows="5" required></textarea>
+      </div>
       <button type="submit" class="btn-feedback">Enviar Opinión</button>
       <div class="form-message-pro"></div>
     </form>
@@ -157,12 +223,13 @@
         </div>
       </div>
     </div>
-    <p style="text-align:center;">© System Innovation - Proyectos Integradores.</p>
+    <p>© System Innovation - Proyectos Integradores.</p>
   </footer>
 
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/proyecto2.js"></script>
+  <script src="js/stats.js"></script>
 
 </body>
 </html>
